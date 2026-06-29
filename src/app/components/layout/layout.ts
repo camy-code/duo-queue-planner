@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-
+import { Navbar } from '../navbar/navbar';
 
 @Component({
   selector: 'app-layout',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Navbar],
   templateUrl: './layout.html',
   styleUrl: './layout.css',
 })
 export class Layout {
   // list of pages: [route, title]
-  private pageList: Array<{ route: string; title: string }> = [
+  public pageList: Array<{ route: string; title: string }> = [
     { route: '', title: 'Home' },
     { route: 'dates', title: 'Dates' },
     { route: 'goals', title: 'Goals' },
