@@ -1,16 +1,20 @@
-<div class="bg-red-900 w-1/2 h-auto rounded-lg shadow-md p-4">
-
-<div class="">
-    <div class="h-10 w-10">
-        <img [src]="cardInfo().imageURL" [alt]="cardInfo().title" />
+<div class="bg-white w-1/2 h-auto rounded-lg shadow-md p-4 border-2 border-gray-300 mx-auto">
+  <div class="grid grid-flow-col grid-rows-3 gap-x-3 gap-y-0 align-items-start">
+    
+    <div class="h-50 w-50 row-span-3">
+      <img [src]="cardInfo().imageURL" [alt]="cardInfo().title" />
     </div>
-    <div>
-        <h1>{{cardInfo().title}}</h1>
-        <body>{{cardInfo().body_text}}</body>
-        <span> @for (item of cardInfo().links; track $index) {
-            <a [href]="item.link" target="_blank">{{item.linkText}}</a>
-        }</span>
-    </div>
+   
+      <h1 class="col-span-1 row-span-1">{{ cardInfo().title }}</h1>
+      <body class="col-span-2 row-span-1">
+        {{ cardInfo().body_text }}
+      </body>
+      <span class="col-span-2 row-span-1">
+        @for (item of cardInfo().links; track $index) {
+          <a [href]="item.link" target="_blank">{{ item.linkText }}</a>
+        }
+      </span>
+   
+  </div>
 </div>
-
-</div>
+<!-- TODO make it screen adjustable, not crazy about it but can look at later -->
