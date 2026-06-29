@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-
+import { Hero } from '../../components/hero/hero';
 @Component({
   selector: 'app-recipes-page',
-  imports: [],
+  imports: [Hero],
   templateUrl: './recipes-page.html',
   styleUrl: './recipes-page.css',
 })
