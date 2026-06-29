@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Card } from '../../components/card/card';
 
 @Component({
   selector: 'app-dates-page',
-  imports: [],
+  imports: [Card],
   templateUrl: './dates-page.html',
   styleUrl: './dates-page.css',
 })
