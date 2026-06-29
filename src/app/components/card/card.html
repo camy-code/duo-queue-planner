@@ -1,13 +1,15 @@
-<div class="bg-red-900">
+<div class="bg-red-900 w-1/2 h-auto rounded-lg shadow-md p-4">
 
-<div>
-    <div>
-        <img/>
+<div class="">
+    <div class="h-10 w-10">
+        <img [src]="cardInfo().imageURL" [alt]="cardInfo().title" />
     </div>
     <div>
-        <h1>Title</h1>
-        <body>Some body text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London</body>
-        <span></span>
+        <h1>{{cardInfo().title}}</h1>
+        <body>{{cardInfo().body_text}}</body>
+        <span> @for (item of cardInfo().links; track $index) {
+            <a [href]="item.link" target="_blank">{{item.linkText}}</a>
+        }</span>
     </div>
 </div>
 
