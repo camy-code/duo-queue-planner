@@ -1,7 +1,7 @@
 import { Service } from '@angular/core';
 
 @Service()
-export class ImportantDays {
+export class ImportantDaysService {
     private importantDays: Array<[string, string]> = [
         ['1999-04-29', 'Diane Birthday'],
         ['2003-02-15', 'Cam Birthday'],
